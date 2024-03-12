@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>find the area</title>
+</head>
+<body>
+   <p>find the area</p> <br>
+   <select name="shapes" id="shapes" >
+    <option value="circle" id="circle">circle</option>
+    <option value="square" id="square">square</option>
+    <option value="rectangle" id="rectangle">rectangle</option>
+</select><br><br>
+<input type="number" id="dimension" placeholder="enter length/radius dimension" required><br><br>
+<input type="number" id="height" placeholder="enter height dimension"><br><br>
+<button type="submit" id="mybtn">find area</button><br><br>
+<label id="area" style="color: blue;"></label>
+<script>
+    document.getElementById("mybtn").onclick=function(){
+        let shape=document.getElementById("shapes").value;
+        let r=document.getElementById("dimension").value;
+        let h=document.getElementById("height").value;
+        let x=Math.PI*Math.pow(r,2);
+        let y=Math.pow(r,2);
+        let z=r*h;
+        if(shape=="circle"){
+        document.getElementById("area").innerHTML=("The area is :" + x)}
+        else if(shape=="rectangle"){
+        document.getElementById("area").innerHTML=("The area is :" + z)}
+        else{
+            document.getElementById("area").innerHTML=("The area is :" + y);
+        }
+    }
+</script>
+</body>
+</html>
